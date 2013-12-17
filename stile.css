@@ -234,8 +234,12 @@
 }
 
 /*to make fb plugins responsive*/
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+.fb_iframe_widget, .fb_iframe_widget span {
   width: 100% !important;
+}
+
+.fb_iframe_widget span iframe[style] {
+    width: 470px !important;
 }
 
 .footer {
