@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Solette riscaldate con batteria integrata">
+		<meta name="keyword" content="solette,caldo,riscaldate,inverno,freddo">
+		<meta name="author" content="Hans Paul Pizzinini">
+		<meta name="generator" content="Sublime Text 3">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta property="fb:admins" content="1058241948"/>
+		
+		<title>Warmit - solette riscaldate piedi freddi</title>
+
+		<!--connect to css -->
+		<link type="text/css" rel="stylesheet" href="stile.css">
+		<link type="text/css" rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen">
+		<link type="text/css" rel="stylesheet" href="responsiveslides/responsiveslides.css">
+		
+		<!-- connect to jQuery libraries -->
+		<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+		<!-- connect to jQuery file -->
+		<script type="text/javascript" src="responsiveslides/responsiveslides.js"></script>
+		<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<!-- optional plug-in -->
+		<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+		<!-- script for background images -->
+		<script>
+			$(function() {
+				$(".rslides").responsiveSlides();
+			});
+			// per disabilitare tasto dx (solo .bind)
+			$(document).ready(function() {
+				$(".fancybox").bind("contextmenu", function (e) {
+			    	return false;
+			    });
+
+				$(".fancybox").fancybox();
+				$(".fancybox")
+				    .attr('rel', 'gallery')
+				    .fancybox({
+				        beforeShow: function () {
+				            /* Add watermark */
+			                $.fancybox.wrap.bind("contextmenu", function (e) {
+			                    return false; /* Disables right click */
+			                });
+				        }
+    				});
+
+			});
+
+		</script>
+
+	</head>
+
+	<body>
+		
+		<div class="main">
+
+			<div class="dx">
+				
+				<!-- foto background -->
+				<ul class="rslides">
+				  <li><img src="foto/1.png" alt=""></li>
+				  <li><img src="foto/2.png" alt=""></li>
+				  <li><img src="foto/3.png" alt=""></li>
+				  <li><img src="foto/4.png" alt=""></li>
+				  <li><img src="foto/5.png" alt=""></li>
+				  <li><img src="foto/6.png" alt=""></li>
+				  <li><img src="foto/7.png" alt=""></li>
+				</ul>
+
+				<img id="zigzag" src="foto/linea.png" alt="">
+				<img id="dritta1" src="foto/linee.png" alt="">
+				<img id="dritta2" src="foto/linee.png" alt="">
+				<img id="dritta3" src="foto/linee.png" alt="">			
+
+				<div class="box">
+
+					<img id="icon1" src="foto/controller.png" alt="" style="width:40px; height:40px"/>
+					<img id="icon2" src="foto/tre.png" alt="" style="width:40px; height:40px"/>
+					<img id="icon3" src="foto/foot.png" alt="" style="width:40px; height:40px"/>
+
+					<div id="b1">
+						<div class="opacity"></div>
+						<p class="text">Warmit è una soletta riscaldata senza fili con batteria integrata pensata per tenere i tuoi piedi caldi in diverse situazioni</p>
+					</div>
+
+					<div id="b2">
+						<div class="opacity"></div>
+						<p class="text" style="padding-top:10%">Scegli facilmente 3 livelli di temperatura grazie al telecomando senza fili</p>
+					</div>
+
+					<div id="b3">
+						<div class="opacity"></div>
+						<p class="text">Supporto plantare adatto a diversi tipi di scarpe e scarponi, sia per uso sportivo che quotidiano</p>
+					</div>
+
+					<a href="action.html"><img id="action" src="foto/action.png" alt=""></a>
+
+				</div>	
+
+			</div>
+
+			<div class="sx">
+
+				<div id="logo">
+					<p style="font-size: 3em">WARMit</p>
+					<p style="font-family:papyrus; font-size:1em; padding-top:0.5em">Soletta riscaldata wireless</p>
+				</div>
+
+				<a id="immagine_prodotto" class="fancybox" rel="gallery" href="foto/11.png"><img src="foto/img1.png" alt="" style="width:300px; height:331px"/></a>
+				
+				<div id="wrapper"> 
+				       
+				    <div class="fb-like fl" data-href="http://warmit.it" data-send="true" data-layout="button_count" data-width="450"></div> 
+				   
+				    <div class="fl" id="commenti">COMMENTI</div>
+   				</div>
+
+				<div id="fbcomment"></div>
+
+				<div id="immagine_popup">
+					<a class="fancybox" rel="gallery" href="foto/p4.jpg"></a>
+					<a class="fancybox" rel="gallery" href="foto/p2.jpg"></a>
+				</div>
+
+			</div>
+
+		</div>
+		
+		<div class="footer">
+			<div id="footop"></div>
+			<p>Warmit © 2013</p>
+		</div>
+		
+		<div id="fb-root"></div>
+			<script>
+				(function(d, s, id) {
+				  var js, fjs = d.getElementsByTagName(s)[0];
+				  if (d.getElementById(id)) return;
+				  js = d.createElement(s); js.id = id;
+				  js.src = "//connect.facebook.net/it_IT/all.js#xfbml=1&appId=180048915506145";
+				  fjs.parentNode.insertBefore(js, fjs);
+				}(document, 'script', 'facebook-jssdk'));
+
+				// to resize facebook comment box
+				$(document).ready(function(){
+
+		    		width_percent = $('body').width() * 1;
+				    fbxml = '<fb:comments href="http://warmit.it" numposts="2" width="' + width_percent  + 'px"></fb:comments>';
+
+				    $('#fbcomment').append(fbxml);
+				    $('.dx').css({ "z-index": "9"});
+				});
+
+			</script>
+	</body>
+</html>

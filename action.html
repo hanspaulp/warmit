@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			<meta name="description" content="Solette riscaldate con batteria integrata">
+			<meta name="keyword" content="solette,caldo,riscaldate,inverno,freddo">
+			<meta name="author" content="Hans Paul Pizzinini">
+			<meta name="generator" content="Sublime Text 3">
+			<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+			
+			<title>Warmit - Dove Acquistare</title>
+
+			<!--connect to css -->
+			<link type="text/css" rel="stylesheet" href="stileact.css">
+
+			<!-- connect to jQuery libraries -->
+			<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+			<script>
+
+				$(document).ready(function() {
+					//parse fb comments
+					$(function(){
+						
+
+						$.ajax({
+
+							url: 'https://graph.facebook.com/comments/?ids=http://warmit.it',
+							type: "GET",
+							success: function(response){
+								
+								for (i in response['http://warmit.it'].comments.data){
+										$('#comments').append(response['http://warmit.it'].comments.data[i].from.name, " <br>ha detto: ", '"', response['http://warmit.it'].comments.data[i].message, '"', '<br>', '<br>' );
+								}
+
+							}
+						});
+
+					});
+					$('.dx').css({ "z-index": "9"});
+				});
+					
+			</script>
+
+	</head>
+	<body>
+		<div class="main">
+
+			<div class="dx">
+				<img src="foto/3.png" alt="">
+			</div>
+
+			<div class="sx">
+
+				<h1>Dove Acquistare</h1>
+				
+				<div class="text"> Per info su dove acquistare scrivere a
+				<a href="mailto:info@warmit.it?Subject=Ordine%20Warmit" target="_top">info@warmit.it</a>
+				</div>
+				<br> 
+				<div class="p1">Alcuni dei nostri clienti dicono:</div>
+				<br>
+				<div id="comments"></div>
+
+			</div>
+
+		</div>
+		
+		<div class="footer">
+			<div id="footop"></div>
+			<p>Warmit © 2013</p>
+		</div>
+		
+
+</body>
+
+</html>
